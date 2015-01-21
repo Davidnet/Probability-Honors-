@@ -1,1 +1,106 @@
-\section{Introduction}
+\section{Introducción}
+En le año 1654 el noble Chevalier de Miere, pregunta B. Pascal, al jugar dados, empieza a preguntar por el numero mínimo de lanzadas para apostar favorablemente a la aparición del doble seis. (Este fue un intercambio de cartas entre Pascal y Pierre de Fermat).
+\subsection{Motivación Teórica}
+\begin{itemize}
+	\item Simetría: Como el lanzamiento de una moneda perfecta, o el tiro de un dado perfecto 
+	
+%\[ \omega  = \right\rbrace x_1, x_2, \ldots x_n  \left\lbrace, \quad | \omega| < \infty \]
+	\item Distribuciones "naturales: Como La Ley de Benford, en numeros "naturales" datos de la forma $a.bcde \ldots $, $a$ es mas probable que sea $1$ menos probable $2$,.. etc.
+	
+	\item \textbf{Ley de los Grandes Números}, para una distribución de la forma  $x_1, x_2, \ldots \in \left\lbrace 0, 1 \right\rbrace $, al largo plazo, este se estabiliza, es decir $ \frac{1}{n} \sum_{i=1}^{n} x_i \rightarrow p $
+	
+	\item \textbf{Teorema Límite Central} $x_1, x_2, \ldots \in \left\lbrace -1, 1 \right\rbrace $, osea tenemos una moneda perfecta.
+	$\frac{1}{\sqrt{n}} \sum_{i =1}^{n}z_i \rightarrow Z $, este $Z$ varía, y la apariencia de $Z$ tiene una apariencia Gaussiana.
+\end{itemize}
+
+\section{Espacios discretos}
+\subsection*{Elementos de la Teoría de Conjuntos}
+Para esta section $ \omega \neq \emptyset $, $ A \subseteq \omega$, definimos también:
+\[ A^c = \left\lbrace \omega \in \sigma | \omega \not \in A \right\rbrace \]
+\begin{lema}
+	\[ \sigma \neq \emptyset,  \]
+\end{lema}
+\subsection*{Relaciones Distributivas:}
+\begin{align*}
+\cup_{i \in J} A_i \cap B = \cup_{i \in J} ( A_i \cap B) \\
+\cap_{i \in J} A_i \cup B = \cap_{}
+\end{align*}
+\subsection*{De Morgan}
+\begin{align*}
+\not
+\end{align*}
+\textbf{El Producto Cartesiano}
+\[ A \times B = \set{(a,b)| a\in A, b \in B} \]
+\begin{lema}
+	$\#(A \times B) = $
+\end{lema}
+
+\begin{lema}
+	Si el conjunoto es finito, $ \#2^{\omega} = 2^{\# \omega}$
+\end{lema}
+
+\begin{proof}
+	Probar
+\end{proof}
+\subsubsection{Distribuciones Finitas y la distribución Uniforme}
+Ejemplos (2.4):
+\begin{itemize}
+	\item Tiro de  una moneda
+	Resultados Cara o sello, es decir la probabilidad de obtener cara es $0.5$ y la probabilidad de obtener sello $0.5$, y la probabilidad del conjunto de que se obtenga cara o sello es 1
+	\item Moneda imperfecta:
+	\[ \omega = \set{0,1}, \mathbb{P} (\omega) = 1  \]
+\end{itemize}
+
+\begin{define}
+	Sea $ \omega = \set{ \omega_1, \ldots, \omega_n} $, $(p_i)_{i=1, \ldots n}, p_i \in  [0,1] $, $\sum_{i =1}^{n} p_i =1 $. 
+	\begin{align*}
+	2^{\omega} \in A \rightarrowtail \PP{A} := \sum_{i = \omega_i \in A} p_i
+	\end{align*}
+	Entonces $ \PP{} $ se le llama \textbf{distribucion finita} los subconjuntos $ \set{ \omega_i} $ eventos elementales $A \in 2^{\omega} $ es un evento. La funcion de $p_{.}: \omega \rightarrow [0,1] $ se llama densidad discreta
+\end{define}
+Ej. 2.6
+Ver notas escritas
+\begin{itemize}
+	\item $(0.5, 0.5)$
+\end{itemize}
+\begin{lema}
+	\textbf{Propiedades inmediatas de $ \PP{} $} 
+	\begin{itemize}
+		\item $\PP{\emptyset}$ = 0
+		\item Complemento: $ \PP{A^{c}} = 1 - \PP{A}$
+		\item Additividad fuerte: $ \PP{ A \cup B} = \PP{A} + \PP{B} - \PP{A \cup B} $
+		\item Additividad finita: $ \PP{A \cup B} = \PP{A} + \PP{B}$ A,B son disjuntos
+		\item Subaditividad: $ \PP{A \cup B} \leq \PP{A} = \PP{B}$
+		\item Monotonía $ A \subseteq B $ implica $ \PP{A} \leq \PP{B} $
+		\item Subtractividad $\PP{B \backslash A} = \PP{B} - P{B \cap A}$
+		\end{itemize}
+		
+\end{lema}
+Probar!
+\begin{define}
+	Sea $ \PP{} $ una distribución discreta sobre $ \Omega = {\omega_1, \ldots, \omega_n} $, y $ \Omega $ es finito. Si $ p_i = p $ entonces $ \PP{} $ se llama distribución uniforme en $ \Omega $ y $ p = \frac{1}{| \Omega |} $ 
+	$ A \in 2^{\Omega }  \rightarrow \PP{A} = \frac{|A|}{|\Omega|} $ 
+\end{define}
+\textbf{Ejemplo 2.8} n-esímo tiro de moneda perfecta.
+\[ \Omega = {0,1}^n = \set{(\omega_1,\ldots, w_n) | \omega_i \in \set{0,1}}, \quad \PP{} = U_{\Omega} \]
+\begin{align*}
+\PP{\set{\omega_1, \ldots, \omega_n}} = \frac{1}{2^n}
+\end{align*}
+\begin{align*}
+A \in 2^{\Omega}, A = \set{\omega\in \Omega | \omega = (\omega_1, \ldots \omega_n), \sum_{i=1}^{n} \omega_i = 2} \\
+\PP{A} = |A|/|\Omega| = \frac{1}{2^n}
+\end{align*}
+\section{Combinatoria elemental y distribuciones derivadas (2.3)}
+
+\begin{lema}
+	Para $n \in \mathbb{N} $ $A,B $ conjuntos con la misma cardinalidad finita, existen $n!$ bijecciones entre $A$ y $B$
+\end{lema}
+\begin{proof}
+	Por inducción. El caso grave, es el inductivo con la idea general para el cual utilizamos 
+\[ (n+1)n! = (n+1)! \]
+\end{proof}
+Recordemos entonces que definimos $ n! = n\cdot(n-1)...1 $
+\textbf{Nota} Para $ A  = B = \set{1,..., n}$, los reordenamientos de los conjuntos es $ n! $
+en rigor
+\[  \set{(b_1, ..., b_n) | b_i \in \set{1, ...,n }, \textrm{no dobles}} \]
+

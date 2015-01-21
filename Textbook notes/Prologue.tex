@@ -1,0 +1,62 @@
+\chapter{Prologue}
+The least we should expect from a reasinable measure $ \mu $ is that it is:
+\begin{center}
+	Well-defined, takes values in $ [0, \infty ] $, and  $ \mu(\emptyset) = 0 $; 
+	
+	additive, i.e $ \mu( A \cup B) = \mu(A) + \mu(B) $ whenever $ A \cap B = \emptyset $.
+	
+	Is invariant under congruences.
+\end{center}
+When dealing with advanced stuff the finite additivity is not enough for this and we have to use a property called  ($\sigma $ - additivity):
+\[ \textrm{area}(\bigcup_{j \in N})A_j = \sum_{j \in N} \textrm{area}(A_j) \]
+Where $A_j$ is the disjoint union of the sets, i.e the sets $A_j$ are pairwise disjoint.
+
+\section{The Pleasures of counting}
+Throughout this section $X$ and $Y$ denote two arbitrary sets. For any two sets $A,B$ we write:
+
+\begin{align*}
+A \cup B &= \set{x : x\in A \textrm{ or } x\in B \textrm{ and } B} \\
+A \cap B &= \set{ x : x\in A \textrm{ and } x \in B} \\
+A \backslash B &= \set{ x : x \in A \textrm{ and } x \not \in B};
+\end{align*}
+for this book $ A \subset B $ means $A$ is contained in $B$ without excluding the possibility that $ A = B $; for the latter we write $ A \subsetneq B$. If $ A \subset X$, we set $ A^c := X \backslash A$ for the complement of $A$ (relative to $X$).
+
+Recall the distributive laws:
+
+\begin{align*}
+A \cap ( B \cup C) &= (A \cap B ) \cup (A \cap C) \\
+A \cup ( B \cap C) &= ( A \cup B) \cap ( A \cup C) 
+\end{align*}
+
+and de Morgan's identities:
+\[ (A \cap B)^c = A^c \cup B^c \]
+\[ (A \cup B)^c = A^c \cap B^c \]
+Observe that these identities also hold for arbitrarily many sets $ A_i \subset X, i \in I$ (I stands for an arbitrary index set),
+\[ \lrp{ \bigcup_{i \in I} A_i }^c = \bigcup_{i \in I} A_i^c \]
+\[\lrp{ \bigcup_{i \in I} A_i}^c = \bigcap_{i \in I} A_i^c \]
+
+A map $ f: X \rightarrow Y $ is called:
+\begin{center}
+	\textit{injective} (or one-one) $ \iff f(x) = f(x)' \implies x = x'$ 
+	
+	\textit{Surjective} (or onto ) $ \iff f(X) := {f(x) \in Y : x \in X} = Y $
+	
+	\textit{Bijective} $ \iff $ is injective and surjective.
+\end{center}
+
+Set operations and direct images under a map $f$ are not in general necessarily compatible, that is
+\begin{align*}
+f(A \cup B) = f(A) \cup f(B) \\
+f(A \cap B) \neq f(A) \cap f(B) \\
+f( A \backslash B ) \neq f(A) \backslash f(B)
+\end{align*}
+
+However Inverse images and set operation are always compatible. For $C, C_i, D \subset Y$ one has:
+
+\begin{align*}
+f^{-1}\lrp{ \bigcup_{i \in I} C_i} = \bigcup_{i \in I} f^{-1}(C_i) \\ 
+f^{-1}\lrp{ \bigcap_{i \in I} C_i} = \bigcap_{i \in I} f^{-1} (C_i) \\ 
+f^{-1}( C \backslash D) = f^{-1}(C) \backslash f^{-1}(D)
+\end{align*}
+
+Favor preguntar.

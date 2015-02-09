@@ -1,0 +1,91 @@
+Miremos la palabra CABEZA CUADRADA.
+$n = 14$
+\[ \binom{N} {K} \]
+REvisar en las notas de distribución que existe un error dado por 
+\[ \sigma = \set{(k_1, k_s) | k_i \in \set{0, \ldots m}, \sum_{i=1}^{r} K_i = m} \]
+
+Para 3 tiros de un dado tenemos:
+\[ p_1 = \frac{1}{3}, p_6 = \frac{1}{6} , p_2, p_3 = \ldots = p_5 = \frac{1}{9}\]
+para el evento en que solo aparecen resultados pares tenemos: la probabilidad en que solo aparecen resultados pares es $ 0,059$
+
+Por ultimo tema combinatorico, tenemos que $ m \in \mathbb{N}$,  $ M= \set{1, \ldots m} $ y definimos:
+\[ V_{m,n} := \set{(b_1,\ldots , b_n) \in  M^n | b_i \leq b_{i+1} \]
+y 
+\[ U_{m,n} := \set{(a_1, \ldots, a_m) \in \set{0,1, \ldots, n}^m | \sum_{i=1}^{m} a_i = n} \]
+Entonces, 
+\[ #V_{m,n} = #U_{m,n} = \binom{m+n-1}{n} \]
+tenemos un :
+\[ A_b (j)  = \sum_{I=1}^{n} \mathbb{I}_{\set{j}} (b_i) \]
+\[ (b_1, \ldots, b_n) = (1,1,1,1,2,2,2,3,3,3,3,3, \ldots , m-1) \]
+la $\mathbb{I}$ es la funcion indicatriz.
+
+\textbf{Ejemplo}
+Elecciones, por ejemplo tenemos $m$ votantes y tenemos $n$ candidatos entonces cuantos resúltados distintos pueden ocurrir, y estos son:
+\begin{align*}
+\binom{m+n-1}{n}
+\end{align*}
+Observemos, que tenemos varias identidades:
+\[ \frac{\binom{m + n}{n}}{\binom{m+n -1}{n}} = \frac{m+n +1}{n} \]
+La formula anterior puede tener un error.
+\textbf{Mecanica Estadistica}\\
+Sistemas de particulas, cada particula esta en un estado eneregetico (estado micro), el estado macro es el estado de todo el ensemble:
+\begin{itemize}
+	\item $m$ estados, $(k_1, \ldots, k_m)$
+\end{itemize}
+Todas las particulas siguen el principio de exclusion de Pauli, que menciona: en cada estado mircro existe al máximo una particula.
+Esta se llama la Estadistica de Fermi-Dirac.
+Por lo cual tenemos que existen:
+\[ \binom{n}{m} \]
+estados macros.
+
+De segundo tenemos la estadistica de Bose-Einstein: Que no respeta el principio de exclusion de Pauli, entonces eso explica que hay:
+\[  \binom{n  +  m -1}{n} \]
+Distribución uniforme sobre los estados macros es la distribución Bose-Einstein
+
+Por ultimo tenemos \textbf{Estadisitica de Maxwell-Boltzteman}
+Las particulas son distinguibles,
+\begin{itemize}
+	\item $m^n $ estados macros.
+\end{itemize}
+
+\section[2.4]{Espacios de Probabilidad Enumerables}
+\begin{define}
+	Sea $ \lambda = \varnothing $, $ \sigma = \set{x_1,x_2 \ldots} $ la cardinalidad inifinita de tal manera que hay una bijección con $ \mathbb{N} $:
+	\begin{itemize}
+		\item $ ( P_i) _{i \in \mathbb{N}}, \quad p_i \in [0,1], \quad \sum_{i=1}^{\infty} p_i = 1 $
+		\item $\function{\mathbb{P}}{2^{\Omega}}{[0,1]} $
+		
+		\[ A \rightarrowtail \mathbb{P}(A)  \]
+		\end{itemize}
+	Se lllama distribución discreta de una moneda.
+\end{define}
+
+\textbf{Ejemplo} Tiro repetido e independiente de una moneda. $ \set{0,1} $, $\mathbb{P}((\set{\omega\in \set{0,1}^{\mathbb{N}}))$
+	
+
+Cual es la distribucion del tiempo aleatorio en $NN$ para la primer aparaicion de un resultado $1$
+
+\begin{define}
+	La distribucion de Possion $ p_\lambda, \lambda > 0 $ es una distibucion sobre $ \mathbb{N}, 2^{\mathbb{N}_0}  $ $P_\lambda(\set{i}) = e^{-\lambda} \lrp{\frac{\lambda^{i}}{i!}} $ 
+	
+\end{define}
+
+\textbf{Torema limite de los cuentos raros}
+Para $n \in \mathbb{N}$, $ p_n \frac{\lambda}{n}$, entonces
+\[ \lim\limits_{n \rightarrow \infty} B_{n, pn} ( \set{U}) = P(\set{k}) \quad \forall \in \mathbb{N_0} \]
+
+\textbf{La Paradoja de Banach-Tarski}
+Para $  \RR^d $ y $d > 3$, $A, B \subseteq R^d$ y el interior de $A$ y $B$ son diferentes de vacio. Entonces existen particiones de $A$ y $B$ finitas tales que: $ A = A_1 \cup a_2 \ldots $ y $B = B_1 \cap B_2 \ldots$ de tal manera que $ A_i = B_i$
+
+la preimagen es definida como:
+\[ f^{-1}(B) = \set{\omega \in \sigma | f(\omega) \in B} \]
+propiedades inmediatas son:
+\begin{align*}
+f^{-1}(\sigma) = \sigma \\
+f^{-1}(\sigma') = \sigma
+\end{align*}
+\begin{lema}
+	Sea $(b_j)_{j \in J} $ preimagen tenemos que respeta operaciones conjutistas bajo elementos no enumerables
+\end{lema}
+
+y con la imagen es estable bajo la union y tenemos que la imagen 

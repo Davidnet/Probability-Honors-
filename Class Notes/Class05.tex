@@ -1,0 +1,56 @@
+\textbf{Ejemplo 2}
+
+Sea $ \sigma \neq \varnothing $ y $ (a_n)_{n \in \mathbb{n}} $ una sucessión creciente, $A_n \contained A_{n+1} $
+tenemos que:
+\[ \liminf_{n \goesto \inf } A_n = \bigcup_{n \in \mathbb{N}} \bigcap_{m \geq n} A_m = \bigcup_{n \in \mathbb{n}} A_m = \bigcup_{n \in \mathbb{N}} A_n \]
+y tambíen:
+\[ \limsup_{n \goesto \infty} A_m = \bigcap_{n \in \mathbb{N}} \bigcap_{m \geq n} A_{m} = \bigcup_{m \geq n} A_m \]
+\textbf{3.}
+
+$ \sigma \neq \varnothing \quad (A_n)_{n \in \mathbb{N}} $ una sucessión decresiente, $A_n \supset A_{n+1} $
+Tenemos que en general:
+
+ver libro
+
+\textbf{Cuarto Ejemplo}
+Tenemos que $ \Omega = \set{0,1}^{\mathbb{N}} \quad A_n := \set{\omega \in \Omega | \omega_i = 0 \quad \forall_i \geq n+1 }$
+
+
+sabemos que:
+
+\[ \bigcap_{n \in \mathbb{N}} A_n = \set{(0,0,0, \ldots )} \]
+\[ \liminf_{m \goesto \infty } A_n = \set{\omega \in \Omega | \exists \mathbb{N} \ldots} = \set{\omega \in \Omega | \sum_{i = n}^{\infty} \omega_i < \infty} \]
+
+\textbf{5} ``Convergencia'' o `` Control de errores'' 
+$\Omega \neq \varnothing$, $\epsilon > 0 $
+\[ S(s_n)_{n \in \mathbb{N}}, \quad l,l_n: \Omega \goesto \RR \]
+\[ A_{n,\epsilon} = \set{\omega \in \Omega | \abs{s_n(\omega) - s(\omega)} > \epsilon } \]
+
+Estos fue una rte de analisis para la cual medimos la succesiones de funciones que son mayor que epsilon.
+
+\[ \bigcap_{\epsilon > 0} \bigcap_{n \in \mathbb{N}} A_n^c = \set{\omega \notin \Omega | \forall n \in \mathbb{N} S_n(\omega) = s(\omega)} \]
+
+\[ \bigcap_{\epsilon > 0 } \liminf_{n \goesto \infty} A_{n,\epsilon} \]
+y esto es equivalente a:
+\[ \set{\omega \in \Omega | \liminf_{n \goesto \infty} s_n(\omega) - s(\omega)} \]
+
+\[ \bigcap_{\epsilon > 0} \limsup_{n \goesto \infty} A_{n,\epsilon}^c \]
+
+
+\textbf{Sigmas Álgebras} 
+
+$\Omega \neq \varnothing$.
+\begin{itemize}
+	\item $\varnothing \in A$,
+	\item $A \in \mathfrak{A} \implies A^c  \in \mathfrak{A} $
+	\item la union de dos elementos esta en $ \mathfrak{A} $ 
+\end{itemize}
+
+
+\begin{define}
+	$(\sigma, \tau)$ espacio topologico, $B(\tau)$ se llaman Borel sigma ó sigma álgebra 
+\end{define}
+
+\begin{lema}
+	$(\RR^d,\tau_d)$ es el espacio euclideano. Definimos $C^d := \qt{la familia de los conjuntos cerrados}$, despues $K^d := \qt{la familia de los conjuntos compactos}$, $J_a^d $ la familia de los intervalos abiertos
+\end{lema}
